@@ -1,0 +1,430 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Digital World | Shivam</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  text-align: center;
+  transition: 0.4s;
+}
+
+/* HEADER */
+header {
+  padding: 65px 20px 35px;
+}
+
+header h1 {
+  font-size: 42px;
+  color: #ffbd59;
+}
+
+header p {
+  font-size: 18px;
+}
+
+/* NAVIGATION */
+nav {
+  background: rgba(0,0,0,0.3);
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background: #ffbd59;
+  color: #222;
+}
+
+/* SECTIONS */
+section {
+  padding: 35px 20px;
+  scroll-margin-top: 70px;
+}
+
+section h1 {
+  color: #ffbd59;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.12);
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 18px;
+  max-width: 330px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* BUTTONS */
+button {
+  background: #ffbd59;
+  color: #222;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* LIVE CLOCK */
+#time {
+  color: #ffbd59;
+  font-size: 40px;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery .card {
+  margin: 10px;
+}
+
+/* FOOTER */
+footer {
+  padding: 25px;
+  background: rgba(0,0,0,0.3);
+  margin-top: 30px;
+}
+
+/* LIGHT MODE */
+body.light-mode {
+  background: #f5f5f5;
+  color: #222;
+}
+
+body.light-mode nav,
+body.light-mode footer {
+  background: #dddddd;
+}
+
+body.light-mode nav a {
+  color: #222;
+}
+
+body.light-mode nav a.active {
+  background: #ffbd59;
+  color: #222;
+}
+
+body.light-mode .card {
+  background: white;
+  color: #222;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode p {
+  color: #222;
+}
+
+body.light-mode #time {
+  color: #a65c00;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 30px;
+  }
+
+  nav a {
+    font-size: 13px;
+    margin: 3px;
+  }
+
+  .card {
+    width: 95%;
+  }
+}
+</style>
+</head>
+
+<body>
+<script>
+  window.onload = function() {
+    alert("Welcome to My Digital World! ✨\nExplore, learn and enjoy your visit! 🚀");
+  };
+</script>
+<!-- THEME BUTTON -->
+<button onclick="toggleTheme()"
+style="position:fixed;top:15px;right:15px;z-index:1000;">
+🌙 Change Theme
+</button>
+
+<!-- HEADER -->
+<header id="home">
+  <h1>MY WORLD ✨</h1>
+  <p>Dream Big. Create More. Stay Curious.</p>
+  <p>Welcome to my digital space!</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#interests">Interests</a>
+  <a href="#clock">Clock</a>
+  <a href="#motivation">Motivation</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+  <a href="#learning">My Journey</a>
+</nav>
+
+<!-- ABOUT ME -->
+<section id="about">
+  <h1>About Me 👨🏻‍💻</h1>
+
+  <div class="card">
+    <div style="font-size:65px;">👨🏻‍💻</div>
+    <h2>Shivam Khakole</h2>
+    <p>Computer Engineering Student</p>
+    <p>Curious Mind | Creative Soul | Future Innovator</p>
+
+    <button onclick="alert('Thanks for visiting my profile!')">
+      Say Hello 👋
+    </button>
+  </div>
+</section>
+
+<!-- INTERESTS -->
+<section id="interests">
+  <h1>My Interests 🚀</h1>
+
+  <div class="card">
+    <h2>📊 Data Analytics</h2>
+    <p>Discovering stories hidden in data.</p>
+  </div>
+
+  <div class="card">
+    <h2>💻 Technology</h2>
+    <p>Exploring the digital world.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎨 Creativity</h2>
+    <p>Turning ideas into something special.</p>
+  </div>
+</section>
+
+<!-- LIVE CLOCK -->
+<section id="clock">
+  <h1>My Live Clock ⏰</h1>
+
+  <div class="card">
+    <h2 id="time">00:00:00</h2>
+    <p>Time is precious. Make every moment count!</p>
+  </div>
+</section>
+
+<!-- MOTIVATION -->
+<section id="motivation">
+  <h1>Daily Motivation ✨</h1>
+
+  <div class="card">
+    <p id="quote">Your next chapter starts today!</p>
+
+    <button onclick="newQuote()">
+      Inspire Me 💡
+    </button>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h1>My Creative Gallery 📸</h1>
+
+  <div class="gallery">
+
+    <div class="card"
+    onclick="alert('Memories make life beautiful! 📸')">
+      <div style="font-size:65px;">🌄</div>
+      <h2>My Memories</h2>
+      <p>Every picture tells a story!</p>
+    </div>
+
+    <div class="card"
+    onclick="alert('Keep learning and building! 💻')">
+      <div style="font-size:65px;">💻</div>
+      <h2>My Projects</h2>
+      <p>Learning, creating and growing!</p>
+    </div>
+
+    <div class="card"
+    onclick="alert('One day, one step closer! 🌟')">
+      <div style="font-size:65px;">🌟</div>
+      <h2>My Dreams</h2>
+      <p>Big ideas. New beginnings.</p>
+    </div>
+
+  </div>
+</section>
+<!-- MY LEARNING TRACKER -->
+<div class="card">
+  <h2>My Current Focus 🎯</h2>
+
+  <p>💻 HTML — <strong>Currently Learning</strong></p>
+  <p>🎨 CSS — <strong>Currently Learning</strong></p>
+  <p>📊 Data Analytics — <strong>Exploring</strong></p>
+  <p>🚀 JavaScript — <strong>Coming Soon</strong></p>
+
+  <p style="font-size:13px;">
+    Every expert was once a beginner. Keep learning, keep growing! 🌱
+  </p>
+</div>
+<!-- MY LEARNING JOURNEY -->
+<section id="learning">
+  <h1>My Learning Journey 🌱</h1>
+
+  <div class="card">
+    <h2>💻 Computer Engineering</h2>
+    <p>Building my foundation in technology.</p>
+  </div>
+
+  <div class="card">
+    <h2>🌐 Web Development</h2>
+    <p>Learning HTML and CSS by creating this website.</p>
+  </div>
+
+  <div class="card">
+    <h2>📊 Data Analytics</h2>
+    <p>Exploring how data can tell meaningful stories.</p>
+  </div>
+
+  <div class="card">
+    <h2>🚀 Personal Growth</h2>
+    <p>Working on communication, confidence and creativity.</p>
+  </div>
+</section>
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <h1>Let's Connect! 🤝</h1>
+
+  <div class="card">
+    <h2>Have an idea? Let's talk!</h2>
+    <p>I'm always interested in learning,
+    creating and exploring new opportunities.</p>
+
+    <a href="https://www.linkedin.com/in/shivam-khakole-4434/"
+       target="_blank"
+       style="text-decoration:none;">
+      <button>Connect on LinkedIn 💼</button>
+    </a>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer>
+  <p>Made with ❤️ by Shivam</p>
+  <p>Keep dreaming. Keep creating. ✨</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+
+// LIVE CLOCK
+function updateClock() {
+  const now = new Date();
+
+  document.getElementById("time").innerText =
+    now.toLocaleTimeString();
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+
+// MOTIVATIONAL QUOTES
+const quotes = [
+  "Dream big. Start small. Act now! 🚀",
+  "Your hard work will create your future! 🌟",
+  "Believe in yourself! 💪",
+  "Every expert was once a beginner! 🎯",
+  "Make today count! ❤️",
+  "Create your own opportunities! ✨"
+];
+
+function newQuote() {
+  const random = Math.floor(Math.random() * quotes.length);
+
+  document.getElementById("quote").innerText =
+    quotes[random];
+}
+
+// DARK AND LIGHT MODE
+function toggleTheme() {
+  document.body.classList.toggle("light-mode");
+}
+
+// ACTIVE NAVIGATION HIGHLIGHT
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+function updateNavigation() {
+  let current = "";
+
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 150) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", updateNavigation);
+window.addEventListener("load", updateNavigation);
+
+</script>
+
+</body>
+</html>
